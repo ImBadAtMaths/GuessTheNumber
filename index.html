@@ -89,6 +89,7 @@
             count++
             if (isNaN(userGuess) || userGuess < 1 || userGuess > 1000) {
                 message.innerText = "Your input is invalid"
+                 count--
             } else if (userGuess > Number) {
                 message.innerText = "Your number is greater than the number generated";
             } else if (userGuess < Number) {
