@@ -79,19 +79,22 @@
         <p id="attempts"></p>
     </div>
     <script>
+        
          var message = document.getElementById("message");
         var attempts = document.getElementById("attempts");
         var guessInput = document.getElementById("guessInput");
         var Number = Math.round(Math.random() * 1000 + 1);
         var count = 0
         var array = []
+        var element
         guessButton.addEventListener("click", function () {
             var userGuess = parseInt(guessInput.value);
             count++
-            if(userGuess == array[0]){
+            if (array.includes(userGuess)) {
                 message.innerText = "You have already entered this number!"
                 count--
-            }else if (isNaN(userGuess) || userGuess < 1 || userGuess > 1000) {
+            } 
+            else if (isNaN(userGuess) || userGuess < 1 || userGuess > 1000) {
                 message.innerText = "Your input is invalid"
                 count--
             } else if (userGuess > Number) {
@@ -114,7 +117,8 @@
             } else {
                 attempts.innerText = `attempts :${count}`;
             }
-        });
+        })
+
     </script>
 </body>
 
