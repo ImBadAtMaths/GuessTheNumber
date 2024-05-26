@@ -12,18 +12,18 @@ guessButton.addEventListener("click", function () {
         error.innerText = `You have already entered this number!`
         message2.innerText = `${userGuess} is greater than the number generated`;
         count--
-    } 
+    }
     else if (array.includes(userGuess) && userGuess < Number) {
         error.innerText = `You have already entered this number!`
         message2.innerText = `${userGuess} is smaller than the number generated`;
         count--
-    } 
-     else if (isNaN(userGuess) || userGuess < 1 || userGuess > 1000) {
+    }
+    else if (isNaN(userGuess) || userGuess < 1 || userGuess > 1000) {
         error.innerText = `Your input is invalid`
         count--
 
-    } 
-     else if (userGuess > Number) {
+    }
+    else if (userGuess > Number) {
         message2.innerText = `${userGuess} is greater than the number generated`;
         array.unshift(userGuess)
         error.innerText = ""

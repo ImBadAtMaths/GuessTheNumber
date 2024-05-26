@@ -6,17 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guessing Game</title>
     <link rel="stylesheet" href="style.css">
+
+    <!-- animated blob -->
+
+    <link rel="stylesheet" href="animated-blob.css">
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+
 </head>
 
-<body>
-
+<body id="app">
 
     <div class="main-container">
         <div class="box-1"><img
                 src="https://images.pexels.com/photos/62289/yemen-chameleon-chamaeleo-calyptratus-chameleon-reptile-62289.jpeg?auto=compress&cs=tinysrgb&w=600"
                 alt="404 | Error image not found." class="box-1_image">
-            </div>
-            
+        </div>
+
         <div class="box-2">
             <h1>Guessing Game</h1>
             <p>Try to guess the number between 1 and 1000.</p>
@@ -27,5 +37,8 @@
             <p id="attempts"></p>
         </div>
     </div>
+    <div class="blob">
+    </div>
     <script src="script.js"></script>
+    <script src="neon-cursor.js"></script>
 </body>
