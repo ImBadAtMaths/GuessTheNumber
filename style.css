@@ -7,21 +7,26 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    overflow-x: hidden;
 }
 
-.container {
-    width: 90%;
-    max-width: 500px;
-    background: #fff;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5em;
+}
+
+.box-1_image {
+    aspect-ratio: 1.5 / 2;
+    object-fit: cover;
+    height: 25em;
+    border-radius: 0.5em;
 }
 
 h1 {
     color: #5d5dff;
-    margin-bottom: 1rem;
+    margin-bottom: 1em;
 }
 
 p {
@@ -60,4 +65,32 @@ button:hover {
     color: #5d5dff;
     font-weight: bold;
     margin-top: 1rem;
+}
+
+/* media for mobile */
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 486px) {
+    .main-container {
+        flex-direction: column;
+    }
+}
+
+/* media for alien devices and iPhone se | suggested by : https://github.com/jatin0jha */
+
+@media only screen and (min-device-width : 375px) {
+    .main-container {
+        gap: 1em;
+        margin: 4em 0;
+        /* margin-bottom: 4em; */
+    }
+
+    .box-1 {
+        margin-top: 5em;
+    }
+}
+
+@media only screen and (min-device-width : 634px) {
+    .main-container {
+        padding: 1em;
+    }
 }
